@@ -10,6 +10,9 @@ The **Quiz Application** is a simple and interactive web-based quiz platform. Us
 - Score calculation and result display
 - Responsive design for different screen sizes
 - GitHub button linking to the developer's profile
+  ![Image](https://github.com/user-attachments/assets/e85008e4-7dd4-47a5-a32b-3fdc3d2c6678)
+  ![Image](https://github.com/user-attachments/assets/559ca19e-9dd5-45ac-8a09-a542e429269d)
+  ![Image](https://github.com/user-attachments/assets/b76c36b4-9bdc-4320-a914-9402acb9e3c6)
 
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript
