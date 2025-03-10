@@ -282,15 +282,11 @@ function dictionaryValueUpdater() {
 }
 
 function dictionaryManager() {
-    // for (let i = 1; i <= questions.length; i++) {
+    
 
     if (dictionary[index + 1] == true) {
 
-        // optionAbtn.disabled = true
-        // optionBbtn.disabled = true
-        // optionCbtn.disabled = true
-        // optionDbtn.disabled = true
-        // console.log("hi")
+        
         if (answerCode[index + 1] == 1) {
             if (codeDictionary[index + 1] == 1) {
                 optionAbtn.style.backgroundColor = 'rgb(162, 235, 186)';
@@ -564,5 +560,36 @@ function dictionaryManager() {
         optionCbtn.disabled = false
         optionDbtn.disabled = false
     }
-    // }
+    
 }
+
+
+function startTimer(duration) {
+    let timer = duration, hours, minutes, seconds;
+    const display = document.querySelector(".timer");
+
+    const interval = setInterval(function () {
+        hours = Math.floor(timer / 3600);
+        minutes = Math.floor((timer % 3600) / 60);
+        seconds = timer % 60;
+
+        display.textContent = `${hours}h ${minutes}m ${seconds}s`;
+        if(timer<600){
+            display.style.color = 'red'
+        }
+
+        if (--timer < 0) {
+            clearInterval(interval);
+            // display.textContent = "Time's up!";
+            mainTag.style.display = 'none'
+            finishScreen.style.display = 'block'
+            yourScore.textContent = `${correctAnswer}`
+            totalScore.textContent = `${maxMarks}`
+        }
+    }, 1000);
+}
+
+startBtn.addEventListener("click", function () {
+    const threeHours = 0.2 * 60 * 60; 
+    startTimer(threeHours);
+});
